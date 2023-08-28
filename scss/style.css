@@ -142,11 +142,12 @@ body {
   color: var(--white);
 }
 .burger .burger-menu {
+  display: none;
   position: absolute;
   background-color: var(--orange1);
   padding: 10px;
   right: 0;
-  margin-top: 17px;
+  top: 63px;
   width: 300px;
   transition: 0.5s;
   transform: translateX(100%);
@@ -176,7 +177,8 @@ body {
   padding-left: 20px;
 }
 .burger .burger-menu [for=close] {
-  align-self: flex-end;
+  position: absolute;
+  right: 0;
 }
 .burger .burger-submenu {
   opacity: 0;
@@ -204,6 +206,7 @@ body {
 }
 .burger #open:checked + .burger-menu {
   transform: translateX(0);
+  display: block;
 }
 
 @media screen and (max-width: 1200px) {

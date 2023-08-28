@@ -158,11 +158,12 @@ body {
     }
 
     .burger-menu {
+        display: none;
         position: absolute;
         background-color: var(--orange1);
         padding: 10px;
         right: 0;
-        margin-top: 17px;
+        top: 63px;
         width: 300px;
         transition: .5s;
         transform: translateX(100%);
@@ -200,7 +201,9 @@ body {
         
 
         [for=close] {
-            align-self: flex-end;
+            // align-self: flex-end;
+            position: absolute;
+            right: 0;
         }
     }
 
@@ -234,6 +237,7 @@ body {
 
     #open:checked+.burger-menu {
         transform: translateX(0);
+        display: block;
     }
 }
 
