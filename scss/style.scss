@@ -261,6 +261,7 @@ body {
 }
 @media screen and (max-width:768px) {
     .container{
+        max-width: 700px;
         padding: 0 10px;
     }
     .nav-left {
@@ -276,3 +277,41 @@ body {
     }
 }
 // !todo FIX BURGER
+
+/*----------------HEADER-----------------------*/
+header{
+    background-image: url(../images/background1.jpg);
+    background-size: cover;
+    background-position: right center;
+}
+.header-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-txt{
+    width: 60%;
+    background-color: var(--orange2);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+    border-radius: 20px;
+    h1{
+        font-size: 80px;
+        color: var(--white);
+        font-family: Slug;
+        letter-spacing: 2px;
+    }
+    p{
+        font-size: 25px;
+    }
+    a{
+        display: inline-block;
+        font-size: 30px;
+        padding: 10px 20px;
+        color: var(--black);
+        background-color: var(--white);
+    }
+}
