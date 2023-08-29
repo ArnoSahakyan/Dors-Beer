@@ -153,6 +153,7 @@ body {
   border-radius: 0 0 0 10px;
   border-left: 2px solid var(--grayish);
   border-bottom: 2px solid var(--grayish);
+  z-index: 10;
 }
 .burger .burger-menu > li:hover .burger-submenu {
   opacity: 1;
@@ -187,6 +188,7 @@ body {
   border-top: 4px solid var(--white);
   border-radius: 8px 0 0 8px;
   transition: 0.3s;
+  z-index: 9;
 }
 .burger .burger-submenu > li > a {
   display: block;
