@@ -314,20 +314,53 @@ header {
   display: inline-block;
   font-size: 30px;
   padding: 10px 20px;
-  color: var(--black);
-  background-color: var(--white);
+  color: var(--white);
+  background-color: var(--black);
   align-self: flex-end;
   border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.header-txt a::after {
+  transition: 0.5s;
+  content: "";
+  position: absolute;
+  background-color: var(--white);
+  inset: 0;
+  transform: translateX(-100%);
+  z-index: -1;
+  transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+.header-txt a:hover {
+  color: var(--black);
+}
+.header-txt a:hover::after {
+  transform: translateX(0);
 }
 
 .header-image {
   width: 40%;
   text-align: center;
+  animation-name: bottle;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
 }
 .header-image img {
   width: 180px;
 }
 
+@keyframes bottle {
+  from {
+    scale: 1;
+  }
+  50% {
+    scale: 1.07;
+  }
+  to {
+    scale: 1;
+  }
+}
 @media screen and (max-width: 1200px) {
   .header-txt {
     width: 55%;
@@ -629,6 +662,25 @@ header {
   padding: 20px 25px;
   background-color: var(--orange2);
   color: var(--white);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.article-btn a::after {
+  transition: 0.5s;
+  content: "";
+  position: absolute;
+  background-color: var(--orange1);
+  inset: 0;
+  transform: translateX(-100%);
+  z-index: -1;
+  transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+.article-btn a:hover {
+  color: var(--black);
+}
+.article-btn a:hover::after {
+  transform: translateX(0);
 }
 
 @media screen and (max-width: 768px) {
@@ -729,6 +781,25 @@ header {
   background-color: var(--white);
   border-radius: 5px;
   font-family: Slug;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.section4-left a::after {
+  transition: 0.5s;
+  content: "";
+  position: absolute;
+  background-color: var(--orange2);
+  inset: 0;
+  transform: translateX(-100%);
+  z-index: -1;
+  transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+.section4-left a:hover {
+  color: var(--white);
+}
+.section4-left a:hover::after {
+  transform: translateX(0);
 }
 
 .section4-right {
